@@ -5,7 +5,7 @@ const searchEngines = {
     github: 'https://github.com/search?q='
 };
 
-let currentEngine = 'google';
+let currentEngine = 'duckduckgo';
 
 function initSearch() {
     const searchInput = document.getElementById('searchInput');

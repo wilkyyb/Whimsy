@@ -1,4 +1,4 @@
-const userName = 'Laura'; 
+const userName = 'Juuso'; 
 
 // Main function to update the greeting and clock
 function updateClockAndGreeting() {
@@ -6,13 +6,13 @@ function updateClockAndGreeting() {
     const clockElement = document.getElementById('clock');
     
     const now = new Date();
-    const { hours, minutes } = getTime(now); // Deconstructed to get hours and minutes
-    const formattedTime = formatTime(hours, minutes); // Format the time
+    const { hours, minutes } = getTime(now); 
+    const formattedTime = formatTime(hours, minutes); 
     
-    const greeting = getGreeting(hours); // Get appropriate greeting
+    const greeting = getGreeting(hours); 
 
-    greetingElement.textContent = `${greeting}, ${userName}!`;
-    clockElement.textContent = `It is currently ${formattedTime}.`;  
+    greetingElement.textContent = `${greeting}, ${userName}! 👋`;
+    clockElement.textContent = `Kello on nyt ${formattedTime}`;  
 }
 
 // Function to extract hours and minutes from a Date object
@@ -22,22 +22,23 @@ function getTime(date) {
     return { hours, minutes };
 }
 
-// Function to format time to a 12-hour format with AM/PM
+// Updated: Function to format time to a 24-hour format (HH:mm)
 function formatTime(hours, minutes) {
-    const period = hours >= 12 ? 'PM' : 'AM';
-    const twelveHour = hours % 12 || 12; // Convert 24-hour time to 12-hour time
-    const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes; // Ensure minutes are always 2 digits
-    return `${twelveHour}:${formattedMinutes} ${period}`;
+    // Adds a leading zero if hours or minutes are less than 10
+    const formattedHours = hours < 10 ? `0${hours}` : hours;
+    const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+    
+    return `${formattedHours}:${formattedMinutes}`;
 }
 
 // Function to determine the greeting message based on the time of day
 function getGreeting(hours) {
     if (hours < 12) {
-        return 'Good morning'; 
+        return 'Hyvää huomenta'; 
     } else if (hours < 18) {
-        return 'Good afternoon'; 
+        return 'Hyvää iltapäivää'; 
     } else {
-        return 'Good evening'; 
+        return 'Hyvää iltaa'; 
     }
 }
 

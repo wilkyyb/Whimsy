@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whimsy</title>
+    <title>Oikku</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <div class="rain-background" id="rainBackground"></div>
 
     <div class="container">
         <div class="left-container">
             <div class="gif">
-                <img src="assets/ganyu.gif" width="360px" alt="Ganyu GIF" />
+                <img src="assets/breakingbad.gif" width="360px" alt="Ganyu GIF" />
             </div>
         </div>
 
@@ -29,17 +28,17 @@
                     type="text" 
                     class="search-bar" 
                     id="searchInput" 
-                    placeholder="🔎   Where to buy pipebombs near me?"
+                    placeholder="🔎   Missä lähin kebabbila?"
                 >
                 <div class="search-engines">
                     <button class="search-engine active" data-engine="google">
+                    <i class="fa-solid fa-magnifying-glass"></i> DuckDuckGo
+                    </button>
+                    <button class="search-engine" data-engine="google">
                         <i class="fa-brands fa-google"></i> Google
                     </button>
                     <button class="search-engine" data-engine="youtube">
                         <i class="fa-brands fa-youtube"></i> YouTube
-                    </button>
-                    <button class="search-engine" data-engine="github">
-                        <i class="fa-brands fa-github"></i> GitHub
                     </button>
                 </div>
             </div>
@@ -48,28 +47,28 @@
                 <div class="category">
                     <div class="links">
                         <li class="title">Daily</li>
-                        <li><a href="https://github.com/">GitHub</a></li>
                         <li><a href="https://youtube.com/">YouTube</a></li>
-                        <li><a href="https://news.ycombinator.com">Hacker News</a></li>
-                        <li><a href="http://news.tuxmachines.org">Tux Machines</a></li>
-                    </div>
-                </div>
-
-                <div class="category">
-                    <div class="links">
-                        <li class="title">Reddit</li>
-                        <li><a href="https://old.reddit.com/r/linux">/r/linux</a></li>
-                        <li><a href="https://old.reddit.com/r/unixart">/r/unixart</a></li>
-                        <li><a href="https://old.reddit.com/r/unixporn">/r/unixporn</a></li>
+                        <li><a href="https://twitch.tv/">Twitch</a></li>
+                        <li><a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a></li>
+                        <li><a href="https://www.hs.fi/">HS</a></li>
                     </div>
                 </div>
 
                 <div class="category">
                     <div class="links">
                         <li class="title">Utils</li>
-                        <li><a href="https://send.vis.ee">Send</a></li>
-                        <li><a href="https://cobalt.tools">Cobalt</a></li>
-                        <li><a href="https://www.vanish.so/">Vanish</a></li>
+                        <li><a href="https://e-z.gg/dash/gallery">E-Z Gallery</a></li>
+                        <li><a href="https://fmhy.net">fhmy</a></li>
+                        <li><a href="https://steamdb.info">SteamDB</a></li>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <div class="links">
+                        <li class="title">Movies</li>
+                        <li><a href="https://aether.mom/">Aether</a></li>
+                        <li><a href="https://nepu.to">Nepu</a></li>
+                        <li><a href="https://www.cineby.gd/">Cineby</a></li>
                     </div>
                 </div>
 
@@ -83,33 +82,17 @@
 
                 <div class="category">
                     <div class="links">
-                        <li class="title">Skyblock</li>
-                        <li><a href="https://sky.shiiyu.moe/">SkyCrypt</a></li>
-                        <li><a href="https://www.brandonfowler.me/skyblockah/?sort=cheap&bin=yes">AH Browser</a></li>
-                        <li><a href="https://skyblock.finance">Bazaar Tracker</a></li>
+                        <li class="title">Minecraft</li>
+                        <li><a href="https://namemc.com/profile/hullu.5">NameMC</a></li>
+                        <li><a href="https://modrinth.com/">Modrinth</a></li>
+                        <li><a href="https://minecraft.wiki/">Wiki</a></li>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="weather-widget">
-        <div id="weather-main">
-            <span id="weather-icon"></span>
-            <div id="weather-temp">
-                <span id="current-temp"></span>
-                <span id="temp-toggle">
-                    <span id="temp-celsius">°C</span> | 
-                    <span id="temp-fahrenheit">°F</span>
-                </span>
-            </div>
-        </div>
-        <p id="error-message"></p>
-    </div>
-
-    <script src="js/weather.js"></script>
     <script src="js/greet.js"></script>
-    <script src="js/rain.js"></script>
     <script src="js/search.js"></script>
 </body>
 </html>
